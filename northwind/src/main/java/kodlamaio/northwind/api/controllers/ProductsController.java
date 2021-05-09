@@ -11,7 +11,7 @@ import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.enitites.concretes.Product;
 
 @RestController // Controller oldugunu belirtiyoruz
-@RequestMapping(name = "/api/products") // domain adersinin path (yolunu) belirtiriz
+@RequestMapping("/api/products") // domain adersinin path (yolunu) belirtiriz
 public class ProductsController { // backend ile diğer teknolojiler arasında köprü görevi gören api bağlantısının
 									// yapıldıgı yer
 
@@ -29,6 +29,6 @@ public class ProductsController { // backend ile diğer teknolojiler arasında k
 							// olacak
 	public List<Product> getAll() {
 
-		return productService.getAll();
+		return this.productService.getAll();
 	}
 }

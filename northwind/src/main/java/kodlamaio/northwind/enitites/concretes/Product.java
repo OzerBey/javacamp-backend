@@ -19,7 +19,7 @@ public class Product {
 	private int id;
 
 	@Column(name = "category_id")
-	private int categoryīd;
+	private int categoryId;
 
 	@Column(name = "product_name")
 	private String productName;
