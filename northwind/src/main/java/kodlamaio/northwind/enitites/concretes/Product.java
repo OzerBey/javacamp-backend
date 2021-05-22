@@ -3,18 +3,23 @@ package kodlamaio.northwind.enitites.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity // veri tabanı nesnesi oldugunu belirtiyoruz
 @Table(name = "products") // veri tabınında hangi tabloya denk geldigini belirtmiş oluyoruz
+@AllArgsConstructor // tüm argümanları kullanarak constructor kur
+@NoArgsConstructor // parametresiz constructor yapısını lombok bizim için gerçekleştiriyor
 public class Product {
 	@Id // işlelerini id ye göre yapacagı için jpa ya bu tablonun id sini belirtiyoruz
 		// burada
-	@GeneratedValue // veri tabanlarında id lerin tek tek artıralacagını belitiyoruz
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // veri tabanlarında id lerin tek tek artıralacagını belitiyoruz
 	@Column(name = "product_id") // VT(DB) deki denk geldigi kolonları belirtilen yer
 	private int id;
 
