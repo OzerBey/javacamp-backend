@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.enitites.concretes.Product;
 
-@RestController // Controller oldugunu belirtiyoruz
+@RestController // Controller oldugunu belirtiyoruz ! Java olmayan kullanıcılar da kullanabilmesi için
 @RequestMapping("/api/products") // domain adersinin path (yolunu) belirtiriz
 public class ProductsController { // backend ile diğer teknolojiler arasında köprü görevi gören api bağlantısının
 									// yapıldıgı yer

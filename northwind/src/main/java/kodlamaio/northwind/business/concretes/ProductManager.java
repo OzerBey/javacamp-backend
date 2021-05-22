@@ -14,8 +14,8 @@ public class ProductManager implements ProductService {
 
 	private ProductDao productDao;
 
-	@Autowired // spring, gidiip arka planda projede buna karşılık gelebilecek product dao nun instance si olabilecek bir tane sinifi üretip veriyor
-	public ProductManager(ProductDao productDao) {
+	@Autowired // spring, gidip arka planda projede buna karşılık gelebilecek product dao nun instance si olabilecek bir tane sinifi üretip veriyor
+	public ProductManager(ProductDao productDao) {  //constructor injection
 		super();
 		this.productDao = productDao;
 	}
