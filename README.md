@@ -4,7 +4,7 @@
 <details>
   <summary>🖱 Click for Swagger2 integration...</summary><br>
 
-##### 1. Adding the Maven Dependency
+## 1. Adding the Maven Dependency
 
 Maven projemize eklemek için pom.xml dosyasında bir bağımlılığa ihtiyacımız var
 
@@ -16,7 +16,7 @@ Maven projemize eklemek için pom.xml dosyasında bir bağımlılığa ihtiyacı
 </dependency>
 ```
 
-##### 2. Swagger UI - Enabling Springfox's Swagger UI
+## 2. Swagger UI - Enabling Springfox's Swagger UI
 
 Swagger UI, Swagger tarafından oluşturulan API belgeleriyle kullanıcı etkileşimini çok daha kolay hale getiren yerleşik bir çözümdür Ve Swagger kullanıcı arayüzünü kullanmak için ek bir Maven bağımlılığı eklememiz gerekmekte bu yüzden projemizin pom.xml'ine ekliyoruz.
 
@@ -32,7 +32,7 @@ Swagger UI, Swagger tarafından oluşturulan API belgeleriyle kullanıcı etkile
 
 ![xmlFile3](https://user-images.githubusercontent.com/49093196/119268687-c10dec80-bbfc-11eb-9d51-cf6b498d3b9e.png)
 
-##### 3. Java Configuration
+## 3. Java Configuration
 
 Tüm API'miz için belgeleri Swagger aracılığıyla kullanıma sunacak olan yapılandrımadır
 Bu methodun amacı; Springboot projemizdeki <strong>@Bean</strong> anotasyonunu gördüğü zaman belleğe yerleştiriyor ve daha sonra Controller paketlerimizdeki requesthandleri bulup dökumante hale getiriyor.
@@ -48,7 +48,7 @@ Bu methodun amacı; Springboot projemizdeki <strong>@Bean</strong> anotasyonunu 
     }
 ```
 java kodunu MainApplication.java classındaki main methodunun altına tanımlıyoruz.
-##### Son olarak
+## Son olarak
 Application class'ımıza <strong>@EnableSwagger2</strong> anotasyonu ile aktif hale getiriyoruz.
 <hr>
 
