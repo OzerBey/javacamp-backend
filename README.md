@@ -53,6 +53,9 @@ Application class'ımıza <strong>@EnableSwagger2</strong> anotasyonu ile aktif 
 <hr>
 
 ### Ve artık Swagger kullanıma hazır ✅
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ![responseBody](https://user-images.githubusercontent.com/49093196/119269467-8443f480-bc00-11eb-842d-84d0073bd16c.jpg)
 <hr>
