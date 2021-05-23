@@ -60,6 +60,6 @@ http://localhost:8080/swagger-ui.html
 ![responseBody](https://user-images.githubusercontent.com/49093196/119269467-8443f480-bc00-11eb-842d-84d0073bd16c.jpg)
 <hr>
 
-![swagger2_](https://user-images.githubusercontent.com/49093196/119268766-12b67700-bbfd-11eb-94e7-cace39e44a0f.jpg)
+[![swagger2_](https://user-images.githubusercontent.com/49093196/119268766-12b67700-bbfd-11eb-94e7-cace39e44a0f.jpg)](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
 <hr>
 </details>
