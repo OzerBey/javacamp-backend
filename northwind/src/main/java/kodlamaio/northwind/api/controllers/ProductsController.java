@@ -14,6 +14,7 @@ import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.enitites.concretes.Product;
+import kodlamaio.northwind.enitites.dtos.ProductWithCategoryDto;
 
 @RestController // Controller oldugunu belirtiyoruz ! Java olmayan kullanıcılar da
 				// kullanabilmesi için
@@ -36,6 +37,12 @@ public class ProductsController { // backend ile diğer teknolojiler arasında k
 	public DataResult<List<Product>> getAll() {
 
 		return this.productService.getAll();
+	}
+
+	@GetMapping("/ProductWithCategoryDetails")
+	public DataResult<List<ProductWithCategoryDto>> ProductWithCategoryDetails() {
+
+		return this.productService.getProductWithCategoryDetails();
 	}
 
 	@PostMapping("/add")

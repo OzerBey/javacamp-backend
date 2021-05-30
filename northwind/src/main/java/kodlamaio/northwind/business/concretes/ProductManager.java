@@ -15,12 +15,11 @@ import kodlamaio.northwind.core.utilities.results.SuccessDataResult;
 import kodlamaio.northwind.core.utilities.results.SuccessResult;
 import kodlamaio.northwind.dataAccess.abstracts.ProductDao;
 import kodlamaio.northwind.enitites.concretes.Product;
+import kodlamaio.northwind.enitites.dtos.ProductWithCategoryDto;
 
 @Service // bu class projede servis görevi görecek diye springe belitrmiş oluyoruz
 public class ProductManager implements ProductService {
 
-
-	
 	private ProductDao productDao;
 
 	@Autowired // spring, gidip arka planda projede buna karşılık gelebilecek product dao nun
@@ -102,6 +101,12 @@ public class ProductManager implements ProductService {
 		Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
 
 		return new SuccessDataResult<List<Product>>(this.productDao.findAll(pageable).getContent());
+	}
+
+	@Override
+	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails() {
+		return new SuccessDataResult<List<ProductWithCategoryDto>>(this.productDao.getProductWithCategoryDetails(),
+				"data listelendi");
 	}
 
 }

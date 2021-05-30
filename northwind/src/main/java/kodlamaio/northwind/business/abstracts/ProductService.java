@@ -5,9 +5,9 @@ import java.util.List;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.enitites.concretes.Product;
+import kodlamaio.northwind.enitites.dtos.ProductWithCategoryDto;
 
 public interface ProductService {
-
 
 	DataResult<List<Product>> getAll();
 
@@ -29,11 +29,14 @@ public interface ProductService {
 
 	DataResult<List<Product>> getByProductNameStartsWith(String productName); // Bu isimle başlayanları getir
 
-	//DataResult<List<Product>> getByProductNameEndsWith(String productName); // Bu isimle bitenleri getir
+	// DataResult<List<Product>> getByProductNameEndsWith(String productName); // Bu
+	// isimle bitenleri getir
 
 	// select * from products where product_name= 'bir şey' and categoryId= 1
 	// //sordugus için
 
 	DataResult<List<Product>> getByNameAndCategory(String productName, int categoryId);
+
+	DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails();
 
 }
