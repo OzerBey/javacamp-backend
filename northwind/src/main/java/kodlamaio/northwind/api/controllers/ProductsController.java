@@ -3,6 +3,7 @@ package kodlamaio.northwind.api.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ import kodlamaio.northwind.enitites.dtos.ProductWithCategoryDto;
 @RestController // Controller oldugunu belirtiyoruz ! Java olmayan kullanıcılar da
 				// kullanabilmesi için
 @RequestMapping("/api/products") // domain adersinin path (yolunu) belirtiriz
+@CrossOrigin
 public class ProductsController { // backend ile diğer teknolojiler arasında köprü görevi gören api bağlantısının
 									// yapıldıgı yer
 
